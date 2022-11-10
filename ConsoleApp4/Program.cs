@@ -1,29 +1,27 @@
-﻿using System;
+﻿using iSpan.Utility;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using iSpan.Utility;
 
-namespace DatabaseDelete
+namespace ConsoleApp4
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			string sql = @"DELETE 
-						from News
-						where Id = @Id";
+			string sql = @"CREATE database VStest";
 			var dbHelper = new SqlDbHelper("default");
 
 			try
 			{
 				var parameters = new SqlParameterBuilder()
-					.AddInt("ID", 2)
 					.Build();
 
 				dbHelper.ExecuteNonQuery(sql, parameters);
-				Console.WriteLine("紀錄已刪除");
+				Console.WriteLine("已建立database");
 			}
 			catch (Exception ex)
 			{

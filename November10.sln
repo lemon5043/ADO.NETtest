@@ -7,11 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDatabaseConnect", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseInsert", "ConsoleApp3\DatabaseInsert.csproj", "{3075432A-4C96-47C9-8044-A4E384B86F50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iSpan.Utility", "iSpan.Utility\iSpan.Utility.csproj", "{AF2FC8FF-D226-4E94-9FF5-37F666BE2F18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "database.Utility", "iSpan.Utility\database.Utility.csproj", "{AF2FC8FF-D226-4E94-9FF5-37F666BE2F18}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseUpdate", "DatabaseUpdate\DatabaseUpdate.csproj", "{2D435B5D-FBED-43D9-8EF0-D9176A5592C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDelete", "DatabaseDelete\DatabaseDelete.csproj", "{0EB25DE5-467C-483E-A324-26B96CC45BC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCreate(SA)", "ConsoleApp4\DatabaseCreate(SA).csproj", "{240E19C7-0A53-4F2F-A514-91092A5C4CFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSelect", "DatabaseSelect\DatabaseSelect.csproj", "{6C624854-FF54-46B0-9C04-D70B9A8FE69D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{0EB25DE5-467C-483E-A324-26B96CC45BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EB25DE5-467C-483E-A324-26B96CC45BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EB25DE5-467C-483E-A324-26B96CC45BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{240E19C7-0A53-4F2F-A514-91092A5C4CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{240E19C7-0A53-4F2F-A514-91092A5C4CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{240E19C7-0A53-4F2F-A514-91092A5C4CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{240E19C7-0A53-4F2F-A514-91092A5C4CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C624854-FF54-46B0-9C04-D70B9A8FE69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C624854-FF54-46B0-9C04-D70B9A8FE69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C624854-FF54-46B0-9C04-D70B9A8FE69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C624854-FF54-46B0-9C04-D70B9A8FE69D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

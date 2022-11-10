@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iSpan.Utility\iSpan.Utility.csproj">
+    <ProjectReference Include="..\iSpan.Utility\database.Utility.csproj">
       <Project>{af2fc8ff-d226-4e94-9ff5-37f666be2f18}</Project>
-      <Name>iSpan.Utility</Name>
+      <Name>database.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

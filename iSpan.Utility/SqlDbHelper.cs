@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,25 @@ namespace iSpan.Utility
 
 			}
 				
+		}
+
+		public DataTable Select(string sql, SqlParameter[] parameters)
+		{
+			using (var conn = new SqlConnection(connString))
+			{
+
+					SqlCommand cmd = new SqlCommand(sql, conn);
+					if (parameters != null)
+					{
+						cmd.Parameters.AddRange(parameters);
+					}
+					SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+					DataSet dataset = new DataSet();
+					adapter.Fill(dataset, "News");
+
+					return dataset.Tables["News"];
 			}
 		}
+	}
 }

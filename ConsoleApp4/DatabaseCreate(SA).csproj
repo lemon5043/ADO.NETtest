@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0EB25DE5-467C-483E-A324-26B96CC45BC8}</ProjectGuid>
+    <ProjectGuid>{240E19C7-0A53-4F2F-A514-91092A5C4CFA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DatabaseDelete</RootNamespace>
-    <AssemblyName>DatabaseDelete</AssemblyName>
+    <RootNamespace>ConsoleApp4</RootNamespace>
+    <AssemblyName>ConsoleApp4</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
