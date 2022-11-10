@@ -20,15 +20,8 @@ namespace ConsoleApp3
 						VALUES(@Title, @vContent, getdate())";
 			var dbHelper = new SqlDbHelper("default");
 
-			#region 使用 using
-
-			//using (var conn = new SqlConnection(connString))
-			//{
 				try
 				{
-					//SqlCommand cmd = new SqlCommand(sql, conn);
-					//conn.Open();
-
 					SqlParameter titleParam = new SqlParameter("@Title", SqlDbType.NVarChar, 50)
 						{ Value = "Greeting" };
 
@@ -36,18 +29,13 @@ namespace ConsoleApp3
 						{ Value = "Howdy!" };
 					var parameters = new SqlParameter[] { titleParam, contentParam };
 
-				//cmd.Parameters.AddRange(new SqlParameter[] { titleParam, contentParameter });
-				//cmd.ExecuteNonQuery();
-
-				dbHelper.ExecuteNonQuery(sql, parameters);
+					dbHelper.ExecuteNonQuery(sql, parameters);
 					Console.WriteLine("紀錄已新增");
 				}
 				catch (Exception ex)
 				{
 					Console.WriteLine($"操作失敗，原因:{ex.Message}");
 				}
-				#endregion
-			//}
 		}
 	}
 }
