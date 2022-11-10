@@ -17,17 +17,15 @@ namespace ConsoleApp3
 			string connString = System.Configuration.ConfigurationManager.ConnectionStrings["default"].ConnectionString;
 			string sql = @"INSERT INTO News
 						(Title, vContent, ModifyTime)
-						VALUES(@Title, @vContent, getdate())";
+						VALUES(@Title, @vContent, getDate())";
 			var dbHelper = new SqlDbHelper("default");
 
 				try
 				{
-					SqlParameter titleParam = new SqlParameter("@Title", SqlDbType.NVarChar, 50)
-						{ Value = "Greeting" };
-
-					SqlParameter contentParam = new SqlParameter("@vcontent", SqlDbType.NVarChar, 3000)
-						{ Value = "Howdy!" };
-					var parameters = new SqlParameter[] { titleParam, contentParam };
+					var parameters = new SqlParameterBuilder()
+						.AddVarchar("@Title", 50, "Greeting")
+						.AddVarchar("@vContent", 3000, "Hello!")
+						.Build();
 
 					dbHelper.ExecuteNonQuery(sql, parameters);
 					Console.WriteLine("紀錄已新增");
@@ -37,5 +35,7 @@ namespace ConsoleApp3
 					Console.WriteLine($"操作失敗，原因:{ex.Message}");
 				}
 		}
+
+
 	}
 }
